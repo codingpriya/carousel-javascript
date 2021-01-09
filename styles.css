@@ -1,0 +1,149 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0; padding: 30px; overflow: hidden;}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 13px 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 100%;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.prev, .next {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.active{
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide{
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+    width: 280px;
+    margin: 10px;
+    border: 2px solid #e1e1e1;
+}
+
+.slide img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.category {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category label{
+    margin-right: 10px;
+}
+
+.category select{
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.category select:focus{
+    outline: 0;
+}
+
+h5 {
+    color: #868686;
+    margin: 0;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+h6 {
+    margin: 0px 0 0;
+    color: #00adff;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.slide:nth-of-type(2) {
+    width: 350px;
+    border: 2px solid #000000;
+    animation: fade 10s forwards;
+    -webkit-animation: fade 10s forwards;
+}
+
+.slide:nth-of-type(2) img {
+    width: 200px;
+    height: 200px;
+}
+
+.slide-in {
+    transform: translateX(100%);
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    transform: translateX(-100%);
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
